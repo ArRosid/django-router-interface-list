@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Django Network Automation</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <div class="container">
+        <h2>{{ device.name }} - {{ device.host }} - interface</h2>
+        <table width=100%>
+            <tr>
+                <th>Interface Name</th>
+                <th>Mac Address</th>
+                <th>Enabled?</th>
+                <th>UP?</th>
+                <th>Switch on/off</th>
+            </tr>
+            {% for interface_name, interface in interfaces.items %}
+                <form action="{% url 'device' device.id %}" method="post" id="{{ interface_name }}">
+                    {% csrf_token %}
+                    <input type="hidden" value="{{ interface_name }}" name="interface_name" >
+                    <input type="hidden" value="{{ interface.is_enabled }}" name="enable">
+                </form>
+                <tr>
+                    <td>{{ interface_name }}</td>
+                    <td>{{ interface.mac_address }}</td>
+                    <td><input type="checkbox" {% if interface.is_enabled %} checked {% endif %} onclick="return false;"></td>
+                    <td><input type="checkbox" {% if interface.is_up %} checked {% endif %} onclick="return false;"></td>
+                    <td><button type="submit" form="{{ interface_name }}" value="Submit">Switch</button></td>
+                </tr>
+            {% endfor %}
+    
+        </table>
+        
+        <a href="/">back</a>
+    </div>
+</body>
+</html>
