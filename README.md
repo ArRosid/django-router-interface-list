@@ -1,13 +1,13 @@
 # django-router-interface-list
-Display of cisco router Interface list using django, also has a function to switch of or switch on the interface.
+Display Cisco router interface list using [Django](https://www.djangoproject.com/). There is also a function to switch an individual interface `on` or `off`.
 
-This is the display of the applications
+Here is an example display of the interface list for a Cisco router.
 
 <img src='https://github.com/arrosid/django-router-interface-list/blob/master/django-router-interface.png'>
 
-If you click switch button, the status of interface will turn on or off. 
+If you click the `switch` button, the status of interface will turn `on` or `off`. 
 
-If you want to try this project, you can follow this intstruction.
+If you want to try this project, you can follow these instructions.
 
 <ol>
     <li>Clone the repository <i>git clone git@github.com:arrosid/django-router-interface-list.git</i></li>
