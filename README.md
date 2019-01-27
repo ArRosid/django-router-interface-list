@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/arrosid/django-router-interface-list)
+
 # django-router-interface-list
 Display Cisco router interface list using [Django](https://www.djangoproject.com/). There is also a function to switch an individual interface `on` or `off`.
 
