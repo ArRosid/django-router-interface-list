@@ -19,7 +19,10 @@ If you want to try this project, you can follow these instructions.
     <li>Run the project</li>
         <ul>
             <li><i>cd django_network</i></li>
+            <li>python manage.py migrate</li>
+            <li>python manage.py createsuperuser</li>
             <li><i>python manage.py runserver</i></li>
         </ul>
-    <li>Open browser and type <i>localhost:8000</i> in the address bar</li>
+    <li>Open browser and type <i>localhost:8000/admin</i> to add devices in the address bar</li>
+    <li>Go to localhost:8000 to see the devices list</li>
 </ol>
