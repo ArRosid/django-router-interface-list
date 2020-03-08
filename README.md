@@ -12,7 +12,7 @@ If you click the `switch` button, the status of interface will turn `on` or `off
 If you want to try this project, you can follow these instructions.
 
 <ol>
-    <li>Clone the repository <i>git clone git@github.com:arrosid/django-router-interface-list.git</i></li>
+    <li>Clone the repository <i>git clone https://github.com/ArRosid/django-router-interface-list.git</i></li>
     <li>Create virtual environtment <i>virtualenv -p python3 env</i></li>
     <li>Activate the virtual environtment <i>source env/bin/activate</i></li>
     <li>Install the requirement package <i>pip install -r requirements.txt</i></li>
