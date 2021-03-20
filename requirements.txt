@@ -7,7 +7,7 @@ cryptography==2.5
 Django==2.1.5
 future==0.17.1
 idna==2.8
-Jinja2==2.10
+Jinja2==2.11.3
 junos-eznc==2.2.0
 lxml==4.3.0
 MarkupSafe==1.1.0
