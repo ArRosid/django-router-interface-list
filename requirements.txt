@@ -15,7 +15,7 @@ napalm==2.3.3
 ncclient==0.6.3
 netaddr==0.7.19
 netmiko==2.3.0
-paramiko==2.4.2
+paramiko==2.10.1
 pyasn1==0.4.5
 pycparser==2.19
 pyeapi==0.8.2
